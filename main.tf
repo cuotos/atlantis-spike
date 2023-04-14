@@ -1,6 +1,6 @@
 terraform {}
 resource null_resource test_resource {
-  triggers = [
+  triggers = {
     key = "anything"
-  ]
+  }
 }
