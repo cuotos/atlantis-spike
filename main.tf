@@ -10,3 +10,7 @@ resource "random_string" "foo" {
   upper   = true
   special = true
 }
+
+output "foo" {
+  value       = random_string.foo.id
+}
