@@ -4,3 +4,13 @@ resource null_resource test_resource {
     key = "value"
   }
 }
+
+resource "random_string" "foo" {
+  length  = 16
+  upper   = true
+  special = true
+}
+
+output "foo" {
+  value       = random_string.foo.id
+}
